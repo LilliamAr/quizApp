@@ -1,0 +1,22 @@
+<div id="<%= dom_id quiz %>">
+  <p>
+    <strong>Description:</strong>
+    <%= quiz.description %>
+  </p>
+  <% quiz.questions.each_with_index do | question, index | %>
+    <div id="">
+    <p>
+      <strong><%= (index+1)%>. <%= question.name %></strong>
+      <%= Question.descriptions.key(question.description).humanize%>
+    </p>
+  </div>
+    <% if question.options %>
+        <% question.options.each do |opt| %>
+          <p>
+            <strong>Select Option:</strong>
+            <%=  opt.label%>
+          </p>
+        <% end %>
+    <% end %>
+  <% end %>
+</div>

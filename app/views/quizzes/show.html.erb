@@ -1,0 +1,10 @@
+<div class="cntainer">ç
+<h2 style="text-align:center;"><%= @quiz.title %></h2>
+  <%= render @quiz %>
+
+  <div>
+    <%= link_to "Edit this quiz", edit_quiz_path(@quiz) %> |
+    <%= link_to "Back to quizzes", quizzes_path %>
+    <%= button_to "Destroy this quiz", @quiz, method: :delete %>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<fieldset id="fieldset-0">
+    <legend>Select the type of question</legend>
+    <% Question.descriptions.each_with_index do | value, index | %>
+      <div>
+      <input type="radio"  data-target="quiz.radioButton" data-action="click->quiz#selectType" id= <%=value[0] %> name="radio-button-0" value= <%=value[1] %>>
+      <label for=<%=value[0] %> ><%=value[0].humanize %> </label>
+    </div>
+    <% end %>
+</fieldset>
